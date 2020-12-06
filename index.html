@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Moon Light Parallax Effects | Vanilla JS</title>
+</head>
+<body>
+    <section>
+        <img src="img/bg.jpg" id="bg">
+        <img src="img/moon.png" id="moon">
+        <img src="img/mountain.png" id="mountain">
+        <img src="img/road.png" id="road">
+        <img src="img/perfil-2.png" id="logo">
+        <h2 id="text">Moon Light</h2>
+    </section>
+    <h1>Parallax Background Scrolling</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis possimus saepe ad natus, voluptatibus sed enim nisi sunt aut repellat atque aliquid consequuntur culpa doloribus, porro esse alias dolorum at?
+    Quod cupiditate sed non recusandae corporis. Atque quia delectus perspiciatis ipsum consectetur laboriosam repellendus eius, laborum saepe temporibus? Repellendus labore tempora, consequuntur cum rem quibusdam dolore amet atque impedit reiciendis!
+    Quidem, voluptatum a molestiae inventore officiis velit sed eaque doloremque, repudiandae, voluptatibus ea quos tenetur at neque iusto explicabo minus veniam eligendi. Ipsa, numquam sapiente totam tenetur quos id porro?
+    Mollitia animi consequuntur fugiat facere cum natus tenetur, totam cupiditate impedit voluptate ut id tempore quae quod rem quidem, quis officiis rerum. Aperiam enim rerum, ducimus quia quibusdam magnam voluptatem.
+    Optio eaque dicta alias! Ducimus illo pariatur ex dolores fugit fuga sit asperiores deserunt delectus cupiditate esse consectetur neque, quod quae officiis architecto omnis sequi maiores at velit natus excepturi?</p>
+    
+    <script type="text/javascript">
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountain");
+        let road = document.getElementById("road");
+        let text = document.getElementById("text");
+        let log = document.getElementById("logo");
+       
+
+        window.addEventListener('scroll', function(){
+            var value = window.scrollY;
+
+            bg.style.top = value * 0.5 + 'px';
+            moon.style.left = -value * 0.5 + 'px';
+            mountain.style.top = -value * 0.15 + 'px';
+            road.style.top = value * 0.15 + 'px';
+            text.style.top = value * 1 + 'px';
+            logo.style.top = value * 0.8 + 'px';
+        })
+    </script>
+</body>
+</html>
